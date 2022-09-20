@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: rgb(101, 121, 155);
+}
+
+.search {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  align-items: flex-start;
+}
+
+.search input {
+  width: 40%;
+  padding: 10px 20px;
+  margin-top: 10%;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+.search button {
+  margin-top: 5%;
+  padding: 5px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+/* box-shadow: none|h-offset v-offset blur spread color */
+
+.card {
+  height: 100%;
+  width: 50%;
+  color: #fff;
+}
+
+.infocard {
+  height: 80%;
+  width: 50%;
+  display: felx;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10%;
+}
+
+.city {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  justify-content: space-between;
+}
+
+.city img {
+  height: 80px;
+  width: 80px;
+  transform: translateY(-25%);
+}
+
+.container {
+  background-color: rgb(90, 96, 130);
+  width: 100%;
+  height: 80%;
+  padding: 10px;
+  margin-top: 10%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  flex: 1;
+}
+
+@media screen and (max-width: 820px) {
+  .infocard {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .App {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .search {
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+
+  .card,
+  .infocard {
+    width: 100%;
+  }
+}
