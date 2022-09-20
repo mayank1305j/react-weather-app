@@ -13,6 +13,7 @@ const Search = () => {
         onChange={(e) => {
           setCity(e.target.value);
         }}
+        onKeyDown={(e) => e.keyCode === 13 && refetch()}
       />
       <button onClick={refetch}>Search</button>
     </div>

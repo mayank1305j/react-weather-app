@@ -2,7 +2,10 @@ import React from "react";
 import { useData } from "../../hooks/useData";
 
 const City = () => {
-  const { data, isLoading } = useData();
+  const { data, isLoading, isError } = useData();
+  if (isError) {
+    return <p>Please enter a valid location</p>;
+  }
   if (isLoading) {
     return <h1>Loading...</h1>;
   }

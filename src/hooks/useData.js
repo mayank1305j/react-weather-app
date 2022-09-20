@@ -7,13 +7,16 @@ export const useData = () => {
   const [city, setCity] = useState("Bhopal");
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
 
-  const { data, isLoading, refetch } = useQuery(["weatherinfo"], () => {
-    return Axios.get(url)
-      .then((res) => res.data)
-      .catch((err) => {
-        console.log(err.message);
-      });
-  });
+  const { data, isLoading, refetch, isError } = useQuery(
+    ["weatherinfo"],
+    () => {
+      return Axios.get(url)
+        .then((res) => res.data)
+        .catch((err) => {
+          console.log(err.message);
+        });
+    }
+  );
 
-  return { data, isLoading, refetch, setCity };
+  return { data, isLoading, refetch, isError, setCity };
 };
