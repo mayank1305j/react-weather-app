@@ -1,4 +1,5 @@
 import React from "react";
+import Darkmode from "./Darkmode";
 import { useData } from "../hooks/useData";
 
 const Search = () => {
@@ -6,6 +7,7 @@ const Search = () => {
   const handleFocus = (event) => event.target.select();
   return (
     <div className="search">
+      <Darkmode />
       <input
         placeholder="City name..."
         autoFocus={true}
@@ -15,6 +17,7 @@ const Search = () => {
         }}
         onKeyDown={(e) => e.keyCode === 13 && refetch()}
       />
+
       <button onClick={refetch}>Search</button>
     </div>
   );
